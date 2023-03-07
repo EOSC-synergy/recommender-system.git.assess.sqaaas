@@ -1,0 +1,46 @@
+config:
+  credentials: []
+  project_repos:
+    git.man.poznan.pl/stash/scm/eosc-rs/recommender-system:
+      branch: master
+      repo: https://git.man.poznan.pl/stash/scm/eosc-rs/recommender-system.git
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system git:
+        commands:
+        - /usr/bin/env sh .sqa/script.crabby-puce-ray.sh
+        container: qc.acc_sloppy-pear-corgi
+  QC.Doc:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sloppy-taupe-booby.sh
+        container: qc.doc_leaky-puce-cougar
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system git:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-emerald-wolfhound.sh
+        container: qc.doc_woozy-tan-fowl
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-ruby-bulldog.sh
+        container: qc.doc_skinny-cream-echidna
+  QC.Lic:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-brass-tamarin.sh
+        container: qc.lic_lanky-pumpkin-wildebeest
+  QC.Ver:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-alizarin-hyena.sh
+        container: qc.ver_homely-persimmon-dragonfly
+timeout: 5400
