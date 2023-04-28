@@ -1,66 +1,46 @@
 config:
   credentials: []
   project_repos:
+    git.man.poznan.pl/stash/scm/eosc-rs/recommender-system:
+      branch: master
+      repo: https://git.man.poznan.pl/stash/scm/eosc-rs/recommender-system.git
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.9
+      branch: release/1.7.10
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/cyfronet-fid/recommender-system:
-      branch: main
-      repo: https://github.com/cyfronet-fid/recommender-system.git
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/cyfronet-fid/recommender-system git:
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system git:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-pink-capybara.sh
-        container: qc.acc_blurry-chestnut-kudu
+        - /usr/bin/env sh .sqa/script.woolly-azure-capybara.sh
+        container: qc.acc_bumpy-indigo-fousek
   QC.Doc:
     repos:
-      github.com/cyfronet-fid/recommender-system find_doc_files.py:
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-sapphire-otter.sh
-        container: qc.doc_dorky-zucchini-maltese
-      github.com/cyfronet-fid/recommender-system git:
+        - /usr/bin/env sh .sqa/script.skinny-corn-cheetah.sh
+        container: qc.doc_snippy-flax-iguana
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system git:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-teal-pinscher.sh
-        container: qc.doc_muggy-buff-collie
-      github.com/cyfronet-fid/recommender-system markdownlint:
+        - /usr/bin/env sh .sqa/script.randy-violet-dachshund.sh
+        container: qc.doc_sickly-bronze-coyote
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-chocolate-balinese.sh
-        container: qc.doc_nippy-red-frise
+        - /usr/bin/env sh .sqa/script.shabby-russet-shark.sh
+        container: qc.doc_wimpy-russet-squirt
   QC.Lic:
     repos:
-      github.com/cyfronet-fid/recommender-system licensee:
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-wisteria-salamander.sh
-        container: qc.lic_surly-viridian-gopher
-  QC.Sec:
-    repos:
-      github.com/cyfronet-fid/recommender-system bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.homey-amaranth-ant.sh
-        container: qc.sec_thirsty-crimson-tamarin
-  QC.Sty:
-    repos:
-      github.com/cyfronet-fid/recommender-system flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.flabby-lilac-bonobo.sh
-        container: qc.sty_pasty-white-mandrill
-      github.com/cyfronet-fid/recommender-system hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.hilly-black-hornet.sh
-        container: qc.sty_slaphappy-aquamarine-newt
-      github.com/cyfronet-fid/recommender-system jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.flabby-tangerine-olm.sh
-        container: qc.sty_smelly-harlequin-bulldog
+        - /usr/bin/env sh .sqa/script.wimpy-amaranth-frog.sh
+        container: qc.lic_ugly-heliotrope-rat
   QC.Ver:
     repos:
-      github.com/cyfronet-fid/recommender-system get_git_tags.py:
+      git.man.poznan.pl/stash/scm/eosc-rs/recommender-system get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-grey-tamarin.sh
-        container: qc.ver_nerdy-cinnabar-crane
+        - /usr/bin/env sh .sqa/script.scummy-bistre-peccary.sh
+        container: qc.ver_pokey-dandelion-paradise
 timeout: 5400
