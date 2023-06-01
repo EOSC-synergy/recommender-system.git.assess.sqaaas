@@ -5,7 +5,7 @@ config:
       branch: master
       repo: https://git.man.poznan.pl/stash/scm/eosc-rs/recommender-system.git
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.10
+      branch: release/1.7.11
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system git:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-azure-capybara.sh
-        container: qc.acc_bumpy-indigo-fousek
+        - /usr/bin/env sh .sqa/script.droopy-denim-civet.sh
+        container: qc.acc_lousy-pear-eel
   QC.Doc:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-corn-cheetah.sh
-        container: qc.doc_snippy-flax-iguana
+        - /usr/bin/env sh .sqa/script.flabby-tan-antelope.sh
+        container: qc.doc_squirrely-carmine-deer
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system git:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-violet-dachshund.sh
-        container: qc.doc_sickly-bronze-coyote
+        - /usr/bin/env sh .sqa/script.crabby-teal-rabbit.sh
+        container: qc.doc_sloppy-tangerine-cat
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-russet-shark.sh
-        container: qc.doc_wimpy-russet-squirt
+        - /usr/bin/env sh .sqa/script.slaphappy-vermilion-gar.sh
+        container: qc.doc_flaky-sepia-walrus
   QC.Lic:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-amaranth-frog.sh
-        container: qc.lic_ugly-heliotrope-rat
+        - /usr/bin/env sh .sqa/script.pokey-eggplant-bear.sh
+        container: qc.lic_woolly-charcoal-rottweiler
   QC.Ver:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-bistre-peccary.sh
-        container: qc.ver_pokey-dandelion-paradise
+        - /usr/bin/env sh .sqa/script.snoopy-corn-markhor.sh
+        container: qc.ver_cheeky-heliotrope-squirt
 timeout: 5400
