@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system git:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-denim-civet.sh
-        container: qc.acc_lousy-pear-eel
+        - /usr/bin/env sh .sqa/script.paltry-rust-elephant.sh
+        container: qc.acc_pokey-olive-catfish
   QC.Doc:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-tan-antelope.sh
-        container: qc.doc_squirrely-carmine-deer
+        - /usr/bin/env sh .sqa/script.skanky-indigo-dalmatian.sh
+        container: qc.doc_slimy-lilac-chamois
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system git:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-teal-rabbit.sh
-        container: qc.doc_sloppy-tangerine-cat
+        - /usr/bin/env sh .sqa/script.crabby-heliotrope-mole.sh
+        container: qc.doc_chewy-yellow-chipmunk
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-vermilion-gar.sh
-        container: qc.doc_flaky-sepia-walrus
+        - /usr/bin/env sh .sqa/script.skinny-linen-terrier.sh
+        container: qc.doc_scummy-cornflower-dogfish
   QC.Lic:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-eggplant-bear.sh
-        container: qc.lic_woolly-charcoal-rottweiler
+        - /usr/bin/env sh .sqa/script.gimpy-coral-ibis.sh
+        container: qc.lic_goopy-vermilion-hyrax
   QC.Ver:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-corn-markhor.sh
-        container: qc.ver_cheeky-heliotrope-squirt
+        - /usr/bin/env sh .sqa/script.chewy-crimson-jaguar.sh
+        container: qc.ver_sleazy-amethyst-pinscher
 timeout: 5400
