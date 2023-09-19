@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system git:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-rust-elephant.sh
-        container: qc.acc_pokey-olive-catfish
+        - /usr/bin/env sh .sqa/script.surly-indigo-quokka.sh
+        container: qc.acc_wheezy-wheat-baboon
   QC.Doc:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-indigo-dalmatian.sh
-        container: qc.doc_slimy-lilac-chamois
+        - /usr/bin/env sh .sqa/script.ready-tan-beagle.sh
+        container: qc.doc_scaly-corn-yak
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system git:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-heliotrope-mole.sh
-        container: qc.doc_chewy-yellow-chipmunk
+        - /usr/bin/env sh .sqa/script.muggy-scarlet-dachsbracke.sh
+        container: qc.doc_whiny-orchid-mist
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-linen-terrier.sh
-        container: qc.doc_scummy-cornflower-dogfish
+        - /usr/bin/env sh .sqa/script.wiggy-cobalt-neanderthal.sh
+        container: qc.doc_paltry-peach-tiger
   QC.Lic:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-coral-ibis.sh
-        container: qc.lic_goopy-vermilion-hyrax
+        - /usr/bin/env sh .sqa/script.dorky-cyan-tzu.sh
+        container: qc.lic_smelly-puce-akita
   QC.Ver:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/recommender-system get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-crimson-jaguar.sh
-        container: qc.ver_sleazy-amethyst-pinscher
+        - /usr/bin/env sh .sqa/script.leaky-cyan-wombat.sh
+        container: qc.ver_woolly-seashell-turtle
 timeout: 5400
